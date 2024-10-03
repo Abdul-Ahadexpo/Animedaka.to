@@ -4,6 +4,30 @@ let cart = [];
 const products = [
   {
     id: 1,
+    name: "Goodbye, Eri Manga",
+    description: "Goodbye, Eri. A one-shot Manga By Tasuki Fujimoto",
+    price: 300,
+    image: "./Manga/gbe.png",
+  },
+
+  {
+    id: 1,
+    name: "Look Back Manga",
+    description: "Look Back. A one-shot Manga By Tasuki Fujimoto",
+    price: 300,
+    image: "./Manga/lb.png",
+  },
+
+  {
+    id: 1,
+    name: " Tokidoki Manga",
+    description: " Tokidoki. A one-shot Manga",
+    price: 400,
+    image: "./Manga/tdt.png",
+  },
+
+  {
+    id: 1,
     name: "Orange Manga Volume 1 and 2",
     description: "Orange Manga Volume 1 and 2",
     price: 450,
