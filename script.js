@@ -11,7 +11,7 @@ const products = [
   },
 
   {
-    id: 1,
+    id: 2,
     name: "Look Back Manga",
     description: "Look Back. A one-shot Manga By Tasuki Fujimoto",
     price: 300,
@@ -19,7 +19,7 @@ const products = [
   },
 
   {
-    id: 1,
+    id: 3,
     name: " Tokidoki Manga",
     description: " Tokidoki. A one-shot Manga",
     price: 400,
@@ -27,7 +27,7 @@ const products = [
   },
 
   {
-    id: 1,
+    id: 4,
     name: "Orange Manga Volume 1 and 2",
     description: "Orange Manga Volume 1 and 2",
     price: 450,
@@ -35,7 +35,7 @@ const products = [
   },
 
   {
-    id: 2,
+    id: 5,
     name: "Orange Manga Volume 3",
     description: "Orange Manga Volume 3",
     price: 350,
@@ -43,7 +43,7 @@ const products = [
   },
 
   {
-    id: 3,
+    id: 6,
     name: "Orange Manga Volume 4",
     description: "Orange Manga Volume 4",
     price: 350,
@@ -51,7 +51,7 @@ const products = [
   },
 
   {
-    id: 4,
+    id: 7,
     name: "Orange Manga Volume 5",
     description: "Orange Manga Volume 5",
     price: 350,
@@ -59,14 +59,14 @@ const products = [
   },
 
   {
-    id: 5,
+    id: 8,
     name: "Orange Manga Volume 6",
     description: "Orange Manga Volume 6",
     price: 350,
     image: "./Orange/6.png",
   },
   {
-    id: 6,
+    id: 9,
     name: "Orange Manga Volume 7",
     description: "Orange Manga Volume 7",
     price: 350,
@@ -74,7 +74,7 @@ const products = [
   },
 
   {
-    id: 7,
+    id: 10,
     name: "Orange Manga all Volumes 1-7 set",
     description: "Orange all completed Volumes 1-7",
     price: 1700,
@@ -82,19 +82,63 @@ const products = [
   },
 
   {
-    id: 8,
-    name: "Anime BookMark 1pec(Random)",
+    id: 11,
+    name: "Anime BookMark 1pcs(Random)",
     description: "Anime themed BookMark",
     price: 20,
     image: "./mqsxzryk.png",
   },
 
   {
-    id: 9,
-    name: "Anime BookMark Box 30pec",
+    id: 12,
+    name: "Anime BookMark Box 30pcs",
     description: "Anime themed BookMark Full box",
     price: 500,
     image: "./frc3f0t6.png",
+  },
+
+  {
+    id: 13,
+    name: "10cm Nobara Action fugure",
+    description: "Action fugure",
+    price: 450,
+    image:
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sd32119c475134f8d988d99bd269943c96.jpg_640x640.jpg_.webp",
+  },
+
+  {
+    id: 14,
+    name: "10cm Gojo Action fugure",
+    description: "Action fugure",
+    price: 450,
+    image:
+      "https://ae-pic-a1.aliexpress-media.com/kf/S09e20f79f37140d681ba668296d9f10bi.jpg_640x640.jpg_.webp",
+  },
+
+  {
+    id: 15,
+    name: "10cm Gojo Action fugure(Open eyes)",
+    description: "Action fugure",
+    price: 450,
+    image:
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sae94d294b6284e9d87bf973e6de6563dO.jpg_640x640.jpg_.webp",
+  },
+
+  {
+    id: 16,
+    name: "10cm Yuj Itadori Action fugure",
+    description: "Action fugure",
+    price: 450,
+    image:
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sb3ca698251e64fc198a8d521158afff1y/9cm-Anime-Jujutsu-Kaisen-Figurine-Satoru-Gojo-Geto-Suguru-Action-Figures-PVC-Model-Collection-Toys-Desk.jpg_.webp",
+  },
+  {
+    id: 16,
+    name: "10cm Megumi Fushiguro Action fugure",
+    description: "Action fugure",
+    price: 450,
+    image:
+      "https://ae-pic-a1.aliexpress-media.com/kf/S55e6fce206a745a2a89acf676523fb69o.jpg_640x640.jpg_.webp",
   },
 ];
 
@@ -290,4 +334,26 @@ function loadFilteredProducts(filteredProducts) {
           )
           .join("")
       : "<p>No products found.</p>";
+}
+
+// Function to filter products by category
+function filterProducts(categoryId) {
+  let filteredProducts;
+
+  if (categoryId === 1) {
+    // Filter only manga products (IDs 1-10)
+    filteredProducts = products.filter(
+      (product) => product.id >= 1 && product.id <= 10
+    );
+  } else if (categoryId === 2) {
+    // Filter only bookmark products (IDs 11 and 12)
+    filteredProducts = products.filter(
+      (product) => product.id >= 11 && product.id <= 30
+    );
+  } else {
+    // Show all products for the "All Products" category
+    filteredProducts = products;
+  }
+
+  loadFilteredProducts(filteredProducts);
 }
