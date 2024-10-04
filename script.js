@@ -7,7 +7,8 @@ const products = [
     name: "Goodbye, Eri Manga",
     description: "Goodbye, Eri. A one-shot Manga By Tasuki Fujimoto",
     price: 300,
-    image: "./Manga/gbe.png",
+    image:
+      "https://i1.whakoom.com/large/28/0f/77cc583fb61441e38d47588167d13739.jpg",
   },
 
   {
@@ -15,7 +16,8 @@ const products = [
     name: "Look Back Manga",
     description: "Look Back. A one-shot Manga By Tasuki Fujimoto",
     price: 300,
-    image: "./Manga/lb.png",
+    image:
+      "https://th.bing.com/th/id/R.bab3de42535daa4af4f27ee4c5788d89?rik=BW3jqn2popclUg&pid=ImgRaw&r=0",
   },
 
   {
@@ -23,7 +25,8 @@ const products = [
     name: " Tokidoki Manga",
     description: " Tokidoki. A one-shot Manga",
     price: 400,
-    image: "./Manga/tdt.png",
+    image:
+      "https://pm1.narvii.com/6271/afb3b57e2afb8d00f218ead95e438dc398ade987_hq.jpg",
   },
 
   {
@@ -31,7 +34,8 @@ const products = [
     name: "Orange Manga Volume 1 and 2",
     description: "Orange Manga Volume 1 and 2",
     price: 450,
-    image: "./Orange/1,2.png",
+    image:
+      "https://th.bing.com/th/id/R.f90bf1fa781992ae0b11168ef6671c5b?rik=2a3BJGRzclm3mQ&riu=http%3a%2f%2fprodimage.images-bn.com%2fpimages%2f9781626923027_p0_v4_s1200x630.jpg&ehk=gT7oM1b7RM1s%2baPNWO6Wi8uNKn0bjN42oTmEomQ%2fwno%3d&risl=&pid=ImgRaw&r=0",
   },
 
   {
@@ -39,7 +43,8 @@ const products = [
     name: "Orange Manga Volume 3",
     description: "Orange Manga Volume 3",
     price: 350,
-    image: "./Orange/3.png",
+    image:
+      "https://th.bing.com/th/id/OIP.XQoMuEkRXtxHAPVzqVwjDAHaKh?w=1600&h=2274&rs=1&pid=ImgDetMain",
   },
 
   {
@@ -47,7 +52,8 @@ const products = [
     name: "Orange Manga Volume 4",
     description: "Orange Manga Volume 4",
     price: 350,
-    image: "./Orange/4.png",
+    image:
+      "https://i.pinimg.com/originals/5d/69/65/5d69655dffc825fc918431f53b023a4c.jpg",
   },
 
   {
@@ -55,7 +61,8 @@ const products = [
     name: "Orange Manga Volume 5",
     description: "Orange Manga Volume 5",
     price: 350,
-    image: "./Orange/5.png",
+    image:
+      "https://i.pinimg.com/originals/92/0b/9b/920b9b3c28c576a577a473175821a543.jpg",
   },
 
   {
@@ -63,14 +70,15 @@ const products = [
     name: "Orange Manga Volume 6",
     description: "Orange Manga Volume 6",
     price: 350,
-    image: "./Orange/6.png",
+    image:
+      "https://comicvine.gamespot.com/a/uploads/scale_medium/6/67663/5885501-06.jpg",
   },
   {
     id: 9,
     name: "Orange Manga Volume 7",
     description: "Orange Manga Volume 7",
     price: 350,
-    image: "./Orange/7.png",
+    image: "https://pbs.twimg.com/media/FcE7py9XEAISG2-?format=jpg&name=large",
   },
 
   {
@@ -78,23 +86,25 @@ const products = [
     name: "Orange Manga all Volumes 1-7 set",
     description: "Orange all completed Volumes 1-7",
     price: 1700,
-    image: "./Orange/completed.png",
+    image: "https://i.ebayimg.com/images/g/8s0AAOSw6f5hC3yR/s-l1600.jpg",
   },
 
   {
     id: 11,
-    name: "Anime BookMark 1pcs(Random)",
+    name: "Anime Bookmarks 1pcs(Random)",
     description: "Anime themed BookMark",
     price: 20,
-    image: "./mqsxzryk.png",
+    image:
+      "https://ae01.alicdn.com/kf/S985a3c37ee084aac9d87d282c653d99bW.jpg?width=800&height=800&hash=1600",
   },
 
   {
     id: 12,
-    name: "Anime BookMark Box 30pcs",
+    name: "Anime Bookmarks Box 30pcs",
     description: "Anime themed BookMark Full box",
     price: 500,
-    image: "./frc3f0t6.png",
+    image:
+      "https://ae01.alicdn.com/kf/S2b73ae021eb0414a9f92aaf82a32a93bK.jpg?width=750&height=797&hash=1547",
   },
 
   {
