@@ -12,7 +12,7 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js"></script>
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/5fc4420cfa.js" crossorigin="anonymous"></script>
-  
+
   <link rel="icon" sizes="180x180" type="image/x-icon" href="./ttg.png">
 
 
@@ -26,62 +26,62 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  
+
 </head>
-  <style>
-    .hlba {
-      border: 2px solid greenyellow
+<style>
+  .hlba {
+    border: 2px solid greenyellow
+  }
+</style>
+<!-- ddddddddddddddddddddddddddddddddd -->
+
+<script>
+  // Function to open the modal
+  function openProfileModal() {
+    document.getElementById('profile-modal').classList.remove('hidden');
+  }
+
+  // Function to close the modal
+  function closeProfileModal() {
+    document.getElementById('profile-modal').classList.add('hidden');
+  }
+
+  // Function to save the new profile picture
+  function saveProfilePicture() {
+    const fileInput = document.getElementById('profile-input');
+    const file = fileInput.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const profilePicUrl = e.target.result;
+        // Save to local storage
+        localStorage.setItem('profilePicture', profilePicUrl);
+        // Update the avatar image
+        document.getElementById('profile-pic').src = profilePicUrl;
+        // Close the modal
+        closeProfileModal();
+      };
+      reader.readAsDataURL(file);
+    } else {
+      alert('Please select an image file.');
     }
-  </style>
-   <!-- ddddddddddddddddddddddddddddddddd -->
+  }
 
-  <script>
-    // Function to open the modal
-    function openProfileModal() {
-      document.getElementById('profile-modal').classList.remove('hidden');
+  // Load the profile picture from local storage on page load
+  window.onload = function () {
+    const savedProfilePic = localStorage.getItem('profilePicture');
+    if (savedProfilePic) {
+      document.getElementById('profile-pic').src = savedProfilePic;
     }
-
-    // Function to close the modal
-    function closeProfileModal() {
-      document.getElementById('profile-modal').classList.add('hidden');
-    }
-
-    // Function to save the new profile picture
-    function saveProfilePicture() {
-      const fileInput = document.getElementById('profile-input');
-      const file = fileInput.files[0];
-
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const profilePicUrl = e.target.result;
-          // Save to local storage
-          localStorage.setItem('profilePicture', profilePicUrl);
-          // Update the avatar image
-          document.getElementById('profile-pic').src = profilePicUrl;
-          // Close the modal
-          closeProfileModal();
-        };
-        reader.readAsDataURL(file);
-      } else {
-        alert('Please select an image file.');
-      }
-    }
-
-    // Load the profile picture from local storage on page load
-    window.onload = function () {
-      const savedProfilePic = localStorage.getItem('profilePicture');
-      if (savedProfilePic) {
-        document.getElementById('profile-pic').src = savedProfilePic;
-      }
-    };
-  </script>
-  <!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+  };
+</script>
+<!-- eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
 
 <body>
 
 
-  
+
   <div class="fixed z-10 bottom-12 right-0 cursor-pointer" id="msgbox">
     <i class="fa-brands fa-signal-messenger fa-2xl text-blue-300"></i>
   </div>
@@ -94,7 +94,7 @@
 
 
 
-  
+
 
 
   <!-- Navbar -->
@@ -117,27 +117,26 @@
         <label tabindex="0" class="cursor-pointer">
           <div class="avatar">
             <div class="ring-primary ring-offset-base-100 w-14 md:w-20 rounded-full ring ring-offset-2">
-              <img id="profile-pic" src="./sun.gif"
-                alt="Avatar" />
+              <img id="profile-pic" src="./sun.gif" alt="Avatar" />
             </div>
           </div>
         </label>
-      <ul tabindex="0" class="dropdown-content menu p-2 shadow rounded-box w-52 hlba  bg-base-100">
-          
+        <ul tabindex="0" class="dropdown-content menu p-2 shadow rounded-box w-52 hlba  bg-base-100">
+
           <li><a href="addproduct.html">Add Your Products</a></li>
-          
+
           <li><a href="https://pre-orderto.vercel.app/">Pre-Order</a></li>
-          
+
           <li><a href="#" onclick="openProfileModal()">Change Profile</a></li>
-          
+
           <li><a href="https://doro-chat-app.vercel.app/" target="_blank">Open Chat</a></li>
-          
+
           <li><a href="https://delivery-status.vercel.app/" target="_blank">Track Order</a></li>
 
 
           <li><a href="https://investorcame.vercel.app/" target="_blank"
               class="hover:underline font-semibold">Invest</a></li>
-          
+
         </ul>
       </div>
     </div>
@@ -160,18 +159,18 @@
 
 
 
-  
+
   <header class="bg-gray-800 text-white p-4">
-   <!-- Category Buttons -->
+    <!-- Category Buttons -->
     <div id="category-buttons" class="mt-4 mb-4 mb-3">
 
-      <button value="0" class="btn btn-outline mb-2" onclick="filterProducts(1)">Beyblade X</button>
+      <button value="0" class="btn btn-outline mb-2" onclick="filterProducts(1)">One shot Manga</button>
 
-      <button value="1" class="btn btn-outline mb-2" onclick="filterProducts(2)">Burst Beys</button>
+      <button value="1" class="btn btn-outline mb-2" onclick="filterProducts(2)">Full Set Manga</button>
 
-      <button value="2" class="btn btn-outline mb-2" onclick="filterProducts(3)">Metal Beys</button>
+      <button value="2" class="btn btn-outline mb-2" onclick="filterProducts(3)">Action Figure</button>
 
-      <button value="2" class="btn btn-outline mb-2" onclick="filterProducts(4)">Takara Tomy</button>
+      <button value="2" class="btn btn-outline mb-2" onclick="filterProducts(4)">Anime merchandise</button>
 
       <button value="2" class="btn btn-outline" onclick="filterProducts(5)">All</button>
     </div>
@@ -189,7 +188,7 @@
   </header>
 
   <main class="p-4">
-  <section id="featured-products" class="mb-8">
+    <section id="featured-products" class="mb-8">
       <h2 class="text-2xl mb-4">Featured Products</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="product-list">
         <!-- Featured Products will be dynamically loaded here -->
@@ -211,7 +210,7 @@
 
 
 
-<!-- Footer -->
+  <!-- Footer -->
   <footer class="footer footer-center bg-base-300 text-base-content p-6 shadow-lg">
     <aside class="flex flex-col items-center">
       <p class="text-sm md:text-base">
@@ -238,7 +237,7 @@
 
   <script src="script.js"></script>
   <script src="msg/msg.js"></script>
-  
+
 </body>
 
 </html>
