@@ -10,10 +10,6 @@
   <link rel="icon" sizes="180x180" type="image/x-icon" href="./tt.jpg">
 </head>
 
-
-
-
-
 <body class="bg-gray-900 text-white p-6">
   <div id="checkout-page" class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
     <h1 class="text-2xl font-bold text-center mb-6">Checkout</h1>
@@ -24,25 +20,21 @@
     <div id="user-info" class="mb-6">
       <h2 class="text-xl font-semibold mb-4">Enter Your Information</h2>
       <form id="info-form" class="space-y-4" onsubmit="handleSubmit(event)">
-
         <div>
           <label for="name" class="label">Name:</label>
-          <input placeholder="Your name.." type="text" id="name"
-            class="input input-bordered w-full bg-gray-700 text-white" required>
+          <input type="text" id="name" class="input input-bordered w-full bg-gray-700 text-white" required>
         </div>
-
         <div>
           <label for="phone" class="label">Phone Number:</label>
-          <input placeholder="01*********" type="tel" id="phone"
-            class="input input-bordered w-full bg-gray-700 text-white" required>
+          <input type="tel" id="phone" class="input input-bordered w-full bg-gray-700 text-white" required>
         </div>
 
 
-       <div>
-            <label for="address" class="label">Address:</label>
-            <textarea placeholder="City, Area, House, etc..." type="text" id="address"
+         <div>
+          <label for="address" class="label">Address:</label>
+          <textarea placeholder="City, Area, House, etc..." type="text" id="address"
             class="input input-bordered w-full bg-gray-700 text-white" required></textarea>
-       </div>
+        </div>
 
         <script>
           document.getElementById('address').addEventListener('input', function () {
@@ -51,48 +43,34 @@
           });
         </script>
 
-        
 
         <div>
           <label for="email" class="label">Email:</label>
-          <input placeholder="spam@gmail.com..." type="email" id="email"
-            class="input input-bordered w-full bg-gray-700 text-white" required>
+          <input type="email" id="email" class="input input-bordered w-full bg-gray-700 text-white" required>
         </div>
 
         <div>
+          <label for="email" class="label">Send the total BDT to this Number (01722786111) and give your transaction
+            number here:
+          </label>
+          <input type="text" id="money" class="input input-bordered w-full bg-gray-700 text-white" required
+            placeholder="If you don't send the money, your order will not be confirmed..">
+        </div>
+
+      <div>
           <label for="msg" class="label">Write a message:</label>
           <input type="text" placeholder="Like The color of the product, etc" id="msgs"
             class="input input-bordered w-full bg-gray-700 text-white">
         </div>
-
+        
         <div>
           <label for="c_code" class="label">Coupon code (If you have any):</label>
           <input type="text" id="c_code" class="input input-bordered w-full bg-gray-700 text-white">
         </div>
-
-        <script>
-          // Check if there is a coupon code saved in localStorage
-          const savedCoupon = localStorage.getItem("usedCoupons");
-          if (savedCoupon) {
-            document.getElementById("c_code").value = savedCoupon;
-            localStorage.setItem("usedCoupons_" + savedCoupon, savedCoupon);
-            localStorage.removeItem("usedCoupons");
-          }
-
-          // Prevent the used coupon from being used again
-          document.getElementById("c_code").addEventListener("input", function () {
-            const inputCoupon = this.value;
-            if (localStorage.getItem("usedCoupons_" + inputCoupon)) {
-              alert("This coupon code has already been used.");
-              this.value = "";
-            }
-          });
-        </script>
-
-
-        <button type="submit" class="btn-53">
+       <button type="submit" class="btn-53">
           <div class="original">ORDER</div>
           <div class="letters">
+
             <span>C</span>
             <span>O</span>
             <span>N</span>
@@ -102,8 +80,6 @@
             <span>M</span>
           </div>
         </button>
-
-
         <style>
           .btn-53,
           .btn-53 *,
@@ -214,7 +190,6 @@
             transition-delay: 0.5s;
           }
         </style>
-
       </form>
     </div>
 
@@ -234,6 +209,7 @@
 
 
 </body>
+
 
 
 
@@ -347,9 +323,10 @@
     const email = document.getElementById("email").value;
     const c_code = document.getElementById("c_code").value;
     const msgs = document.getElementById("msgs").value;
+     const money = document.getElementById("money").value;
 
     // Check if all fields are filled
-    if (!name || !phone || !address || !email) {
+    if (!name || !phone || !address || !email || !money) {
       alert("Please fill out all fields.");
       return;
     }
@@ -368,6 +345,7 @@
       access_key: "78bafe1f-05fd-4f4a-bd3b-c12ec189a7e7",
       Coupon_code: c_code,
       message: msgs,
+       money: money,
       name: name,
       phone: phone,
       address: address,
@@ -463,5 +441,6 @@
 
   };
 </script>
+</body>
 
 </html>
