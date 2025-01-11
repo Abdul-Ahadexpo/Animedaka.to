@@ -569,7 +569,7 @@ function filterProducts(categoryId) {
   } else if (categoryId === 2) {
     // Filter only bookmark products (IDs 11 and 14)
     filteredProducts = products.filter(
-      (product) => product.id >= 10 && product.id <= 10.25
+      (product) => product.id >= 1 && product.id <= 10
     );
   } else if (categoryId === 3) {
     // Filter only bookmark products (IDs 15 and 18)
