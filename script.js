@@ -46,7 +46,7 @@ const products = [
     description: "Orange Manga Volume 3",
     price: 350,
     image:
-      "https://th.bing.com/th/id/OIP.XQoMuEkRXtxHAPVzqVwjDAHaKh?w=1600&h=2274&rs=1&pid=ImgDetMain",
+      "https://static-01.daraz.com.bd/p/1e2cc523059789b670cbf4152a25737a.jpg",
   },
 
   {
